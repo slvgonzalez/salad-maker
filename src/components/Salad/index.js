@@ -1,8 +1,9 @@
 import React from 'react'
+import SaladForm from './SaladForm'
 
 const Salad = () => {
   return (
-    <div>index</div>
+    <SaladForm />
   )
 }
 
