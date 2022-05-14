@@ -17,8 +17,9 @@ const SaladForm = () => {
           />
           <Select
             label="Size"
-            name="currentSize"
+            name="type"
             options = {[
+              { size: 'Select a size' },
               { size: 'small', targetCost: 1.5, targetWeight: 150 },
               { size: 'medium', targetCost: 2.5, targetWeight: 300 },
               { size: 'large', targetCost: 3.5, targetWeight: 550 },
