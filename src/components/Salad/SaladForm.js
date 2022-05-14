@@ -33,30 +33,8 @@ const SaladForm = () => {
     <Form >
       <Grid container>
         <Grid item xs={6}>
-          <Input
-            disabled
-            name="saladName"
-            label="Salad Name"
-            value={values.name}
-          />
-          <Select
-            label="Size"
-            name="type"
-            value={values.size}
-            options = {[
-              { size: 'Select a size' },
-              { size: 'small', targetCost: 1.5, targetWeight: 150 },
-              { size: 'medium', targetCost: 2.5, targetWeight: 300 },
-              { size: 'large', targetCost: 3.5, targetWeight: 550 },
-            ]}
-          />
         </Grid>
         <Grid item xs={6}>
-          <Input
-            disabled
-            name="saladSize"
-            label="Size"
-          />
         </Grid>
 
       </Grid>

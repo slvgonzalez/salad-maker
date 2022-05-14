@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from "react";
 import DataService from "simple-localstorage-data-service-stub";
+import Salad from './index.js';
+import Button from "../../controls/Button";
 
 console.log("im here")
 
@@ -15,7 +17,15 @@ const SaladDesigner = (props) => {
     dataService.get('products').then(response => setProducts(response));
     dataService.get('suppliers').then(response => setSuppliers(response));
     dataService.get('businessLogic').then(response => setBusinessLogic(response));
+    dataService.get('salads').then(response => setSalads(response));
   }, [])
+
+  console.log(products)
+  console.log(suppliers)
+  console.log(businessLogic)
+  console.log('salads:')
+  console.log(salads)
+
 
   // Example of data file save.
   const onSaveClick = () => {
@@ -31,8 +41,7 @@ const SaladDesigner = (props) => {
   }
 
   return <>
-    <label htmlFor="input">Form</label>
-    <input type="file" id="input" onInput={handleFileInput}/>
+    <Salad list={salads}/>
   </>
 }
 

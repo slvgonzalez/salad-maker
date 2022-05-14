@@ -1,12 +1,11 @@
 import { Container, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import './App.css';
-import Salad from './components/Salad/index.js';
+import SaladDesigner from './components/Salad/SaladDesigner';
+import Button from './controls/Button';
 
 
 function App() {
-
-  const [data, setData] = useState([]);
 
   return (
     <Container maxWidth="md">
@@ -16,7 +15,8 @@ function App() {
         align='center'>
           Mel's Kitchen
       </Typography>
-      <Salad />
+      <SaladDesigner />
+
     </Container>
   );
 }
