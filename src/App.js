@@ -3,7 +3,10 @@ import React, { useState } from 'react';
 import './App.css';
 import Salad from './components/Salad/index.js';
 
+
 function App() {
+
+  const [data, setData] = useState([]);
 
   return (
     <Container maxWidth="md">
