@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import Input from '../../controls/Input'
-import Select from '../../controls/Select'
 
 const generateSaladModelObject = () => ({
     id: 1,

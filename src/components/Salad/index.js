@@ -1,18 +1,16 @@
 import React from 'react'
-import { Button, TableBody, Typography } from '@mui/material';
-import SaladForm from './SaladForm'
+import { Button, Table, Typography } from '@mui/material';
 import SaladTable from './SaladTable'
 import { AddCircle } from '@mui/icons-material';
 
-const Salad = ({list}) => {
+const Salad = ({list, products}) => {
 
-  const displaySalads = (list) => {
-    console.log("Aqui el mapeo")
-    console.log(list);
-
+  const displaySalads = (list, products) => {
     return (
       list.map((salad) => (
-        <SaladTable  salad={salad}/>
+        <Table key={salad.id}>
+          <SaladTable  salad={salad} produtcs={ products }/>
+        </Table>
       ))
     )
   }

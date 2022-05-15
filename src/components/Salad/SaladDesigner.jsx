@@ -22,7 +22,6 @@ const SaladDesigner = (props) => {
   console.log(products)
   console.log(suppliers)
   console.log(businessLogic)
-  console.log('salads:')
   console.log(salads)
 
 
@@ -40,7 +39,7 @@ const SaladDesigner = (props) => {
   }
 
   return <>
-    <Salad list={salads}/>
+    <Salad list={salads} products={products} types={businessLogic}/>
   </>
 }
 

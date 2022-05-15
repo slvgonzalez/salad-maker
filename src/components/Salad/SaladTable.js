@@ -1,23 +1,13 @@
 import React from 'react';
 import { TableBody, TableCell, TableRow } from "@mui/material";
 
-const SaladTable = ({ salad }) => {
 
-  console.log("aqui los ingredients")
-  console.log(salad.ingredients)
+const SaladTable = ({ salad, products, types}) => {
 
-  const listIngredients = salad.ingredients.map((ingredient) => {
-    return (
-    <TableRow>
-      <TableCell>
-        Id: {ingredient.id}
-      </TableCell>
-      <TableCell>
-        Servings: {ingredient.numOfServings}
-      </TableCell>
-    </TableRow>
-    )
-  })
+  console.log(types)
+  console.log(products)
+
+
 
   console.log("aqui los props del header")
   console.log(salad)
@@ -36,7 +26,20 @@ const SaladTable = ({ salad }) => {
           {salad.size}
         </TableCell>
       </TableRow>
-      { listIngredients }
+      {
+        salad.ingredients.map((ingredient) => {
+          return (
+            <TableRow key={ingredient.id}>
+              <TableCell>
+                Id: {ingredient.id}
+              </TableCell>
+              <TableCell>
+                Servings: {ingredient.numOfServings}
+              </TableCell>
+            </TableRow>
+          )
+        })
+      }
     </TableBody>
   );
 };
