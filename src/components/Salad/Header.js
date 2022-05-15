@@ -1,15 +1,24 @@
-import React, { Fragment } from 'react';
-import {} from "@mui/material";
+import React from 'react';
+import { TableCell, TableRow } from "@mui/material";
 
-const Header = ({ sizes, setCurrentSize, currentSize }) => {
+const Header = ({ props }) => {
+
+  console.log("aqui los props del header")
+  console.log(props)
 
   const handleChange = (e) => {
     const val = e.target.value;
   };
 
   return (
-    <>
-    </>
+    <TableRow>
+      <TableCell>
+        {props.name}
+      </TableCell>
+      <TableCell>
+        {props.size}
+      </TableCell>
+    </TableRow>
   );
 };
 

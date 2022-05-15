@@ -1,5 +1,5 @@
 import { Container, Typography } from '@mui/material';
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
 import SaladDesigner from './components/Salad/SaladDesigner';
 

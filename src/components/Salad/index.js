@@ -1,24 +1,25 @@
 import React from 'react'
-import { Button, IconButton, Tooltip, Typography } from '@mui/material';
+import { Button, Typography } from '@mui/material';
 import SaladForm from './SaladForm'
 import Header from './Header'
 import { AddCircle } from '@mui/icons-material';
 
 const Salad = ({list}) => {
 
-  console.log(list)
-
   const displaySalads = (list) => {
-    list.map((salad) => (
-      < div ClassName="card">
+    console.log("Aqui el mapeo")
+    console.log(list);
+
+    return (
+      list.map((salad) => (
         <Header props={salad}/>
         <SaladForm salad={salad} />
-      </ div >
     ))
+    )
   }
 
   const addSalad = () => {
-
+    console.log("Add Salad pressed")
   }
 
   return (
@@ -35,6 +36,7 @@ const Salad = ({list}) => {
           variant="outlined"
           startIcon={<AddCircle />}
           gutterBottom
+          onClick={ addSalad }
           >
             Create Salad
           </Button>
