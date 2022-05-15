@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button, TableBody, Typography } from '@mui/material';
 import SaladForm from './SaladForm'
-import SaladHeader from './SaladHeader'
+import SaladTable from './SaladTable'
 import { AddCircle } from '@mui/icons-material';
 
 const Salad = ({list}) => {
@@ -12,10 +12,8 @@ const Salad = ({list}) => {
 
     return (
       list.map((salad) => (
-        <TableBody>
-          <SaladHeader props={salad}/>
-        </TableBody>
-    ))
+        <SaladTable  salad={salad}/>
+      ))
     )
   }
 
