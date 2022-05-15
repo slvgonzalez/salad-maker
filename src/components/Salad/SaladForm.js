@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Form from '../../layouts/Form'
 import Input from '../../controls/Input'
 import Select from '../../controls/Select'
 import { Grid } from '@mui/material'
@@ -29,15 +28,8 @@ const SaladForm = () => {
   // }
 
   return (
-    <Form >
-      <Grid container>
-        <Grid item xs={6}>
-        </Grid>
-        <Grid item xs={6}>
-        </Grid>
-
-      </Grid>
-    </Form>
+    <>
+    </>
   )
 }
 

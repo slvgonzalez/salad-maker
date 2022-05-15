@@ -1,7 +1,7 @@
 import React from 'react';
 import { TableCell, TableRow } from "@mui/material";
 
-const Header = ({ props }) => {
+const SaladHeader = ({ props }) => {
 
   console.log("aqui los props del header")
   console.log(props)
@@ -22,4 +22,4 @@ const Header = ({ props }) => {
   );
 };
 
-export default Header;
+export default SaladHeader;
