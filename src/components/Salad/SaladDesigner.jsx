@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from "react";
 import DataService from "simple-localstorage-data-service-stub";
 import Salad from './index.js';
-import Button from "../../controls/Button";
 
 console.log("im here")
 

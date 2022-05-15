@@ -1,5 +1,5 @@
 import React from 'react'
-import { IconButton, Tooltip, Typography } from '@mui/material';
+import { Button, IconButton, Tooltip, Typography } from '@mui/material';
 import SaladForm from './SaladForm'
 import Header from './Header'
 import { AddCircle } from '@mui/icons-material';
@@ -17,6 +17,10 @@ const Salad = ({list}) => {
     ))
   }
 
+  const addSalad = () => {
+
+  }
+
   return (
     <>
       <div className='wrapper'>
@@ -25,12 +29,15 @@ const Salad = ({list}) => {
           variant="h5"
           align='center'>
             List of Salads
-        </Typography>
-        <Tooltip title="Create a salad">
-          <IconButton>
-            <AddCircle />
-          </IconButton>
-        </Tooltip>
+          </Typography>
+          <Button
+          color="success"
+          variant="outlined"
+          startIcon={<AddCircle />}
+          gutterBottom
+          >
+            Create Salad
+          </Button>
       </div>
       { displaySalads(list) }
     </>
