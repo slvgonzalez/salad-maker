@@ -2,19 +2,16 @@ import React from 'react';
 import { TableBody, TableCell, TableRow } from "@mui/material";
 
 
-const SaladTable = (props) => {
-
-  console.log(props)
-  const salad = props.salad
+const SaladTable = ({salad, ingredients, types}) => {
 
 
   const handleChange = (e) => {
     const val = e.target.value;
   };
 
-  const findProduct = (id, products) => {
-    const productFound = products.find(ingredient => ingredient.id === id)
-    return productFound
+  const findProduct = (id) => {
+    const productFound = ingredients.find(ingredient => ingredient.id === id)
+    return (productFound)
   }
 
   return (
@@ -29,10 +26,11 @@ const SaladTable = (props) => {
       </TableRow>
       {
         salad.ingredients.map((ingredient) => {
+          const product = findProduct(ingredient.id)
           return (
             <TableRow key={ingredient.id}>
               <TableCell>
-                Find Product function
+                {product.name}
               </TableCell>
               <TableCell>
                 Servings: {ingredient.numOfServings}
