@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, IconButton, Table, TableBody, TableCell, TableHead, TableRow } from "@mui/material";
 import SelectForm from '../SelectForm';
-import { AddCircle } from '@mui/icons-material';
+import { AddCircle, Create } from '@mui/icons-material';
 
 
 const SaladTable = ({salad, ingredients, types}) => {
@@ -22,6 +22,9 @@ const SaladTable = ({salad, ingredients, types}) => {
         <TableRow>
           <TableCell>
             {salad.name}
+            <IconButton aria-label="Add" size="small" onClick={() => console.log("edit salad name")}>
+              <Create fontSize="inherit"/>
+            </IconButton>
           </TableCell>
           <TableCell>
             <SelectForm types={types.saladTypes} salad={salad}/>
@@ -38,7 +41,7 @@ const SaladTable = ({salad, ingredients, types}) => {
                   {product.name}
                 </TableCell>
                 <TableCell>
-                  <IconButton aria-label="Add" size="small" onClick={console.log("add serving")}>
+                  <IconButton aria-label="Add" size="small" onClick={() => console.log("add serving")}>
                    <AddCircle fontSize="inherit" />
                   </IconButton>
                   Servings: {ingredient.numOfServings}
