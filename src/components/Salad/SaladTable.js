@@ -1,5 +1,5 @@
 import React from 'react';
-import { TableBody, TableCell, TableRow } from "@mui/material";
+import { Button, Table, TableBody, TableCell, TableHead, TableRow } from "@mui/material";
 
 
 const SaladTable = ({salad, ingredients, types}) => {
@@ -15,31 +15,35 @@ const SaladTable = ({salad, ingredients, types}) => {
   }
 
   return (
-    <TableBody>
-      <TableRow>
-        <TableCell>
-          {salad.name}
-        </TableCell>
-        <TableCell>
-          {salad.size}
-        </TableCell>
-      </TableRow>
-      {
-        salad.ingredients.map((ingredient) => {
-          const product = findProduct(ingredient.id)
-          return (
-            <TableRow key={ingredient.id}>
-              <TableCell>
-                {product.name}
-              </TableCell>
-              <TableCell>
-                Servings: {ingredient.numOfServings}
-              </TableCell>
-            </TableRow>
-          )
-        })
-      }
-    </TableBody>
+    <Table>
+      <TableHead>
+        <TableRow>
+          <TableCell>
+            {salad.name}
+          </TableCell>
+          <TableCell>
+            {salad.size}
+          </TableCell>
+        </TableRow>
+      </TableHead>
+      <TableBody>
+        {
+          salad.ingredients.map((ingredient) => {
+            const product = findProduct(ingredient.id)
+            return (
+              <TableRow key={ingredient.id}>
+                <TableCell>
+                  {product.name}
+                </TableCell>
+                <TableCell>
+                  Servings: {ingredient.numOfServings}
+                </TableCell>
+              </TableRow>
+            )
+          })
+        }
+      </TableBody>
+    </Table>
   );
 };
 

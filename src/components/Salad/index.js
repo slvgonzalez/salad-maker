@@ -14,9 +14,10 @@ const Salad = (props) => {
     const ingredients = props.products
     return (
       list.map((salad) => (
-        <Table key={salad.id}>
+        <div className='wrapper' key={salad.id}>
           <SaladTable  salad={salad} ingredients={ ingredients } types={ types }/>
-        </Table>
+          <Button variant="text">ADD INGREDIENT</Button>
+        </div >
       ))
     )
   }
