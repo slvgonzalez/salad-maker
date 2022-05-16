@@ -1,8 +1,7 @@
 import React, {useEffect, useState} from "react";
 import DataService from "simple-localstorage-data-service-stub";
 import Salad from './index.js';
-
-console.log("im here")
+import IndexHeader from "./IndexHeader.js";
 
 const dataService = DataService();
 
@@ -19,9 +18,13 @@ const SaladDesigner = (props) => {
     dataService.get('salads').then(response => setSalads(response));
   }, [])
 
+  console.log("aqui los products")
   console.log(products)
+  console.log("aqui los suppliers")
   console.log(suppliers)
+  console.log("aqui businessLogic")
   console.log(businessLogic)
+  console.log("aqui SALADS")
   console.log(salads)
 
 
@@ -39,6 +42,7 @@ const SaladDesigner = (props) => {
   }
 
   return <>
+    <IndexHeader />
     <Salad list={salads} products={products} types={businessLogic}/>
   </>
 }

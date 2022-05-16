@@ -1,43 +1,28 @@
-import React from 'react'
-import { Button, Table, Typography } from '@mui/material';
-import SaladTable from './SaladTable'
-import { AddCircle } from '@mui/icons-material';
+import React from 'react';
+import { Button, Table } from '@mui/material';
+import SaladTable from './SaladTable';
 
-const Salad = ({list, products}) => {
 
-  const displaySalads = (list, products) => {
+const Salad = (props) => {
+  console.log(props)
+
+  const list = props.list
+
+  const displaySalads = (list) => {
+
+    const types = props.types
+    const ingredients = props.products
     return (
       list.map((salad) => (
         <Table key={salad.id}>
-          <SaladTable  salad={salad} produtcs={ products }/>
+          <SaladTable  salad={salad} ingredients={ ingredients } types={ types }/>
         </Table>
       ))
     )
   }
 
-  const addSalad = () => {
-    console.log("Add Salad pressed")
-  }
-
   return (
     <>
-      <div className='wrapper'>
-        <Typography
-          gutterBottom
-          variant="h5"
-          align='center'>
-            List of Salads
-          </Typography>
-          <Button
-          color="success"
-          variant="outlined"
-          startIcon={<AddCircle />}
-          gutterBottom
-          onClick={ addSalad }
-          >
-            Create Salad
-          </Button>
-      </div>
       { displaySalads(list) }
     </>
   )
