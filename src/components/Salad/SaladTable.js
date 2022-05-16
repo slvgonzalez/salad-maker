@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Table, TableBody, TableCell, TableHead, TableRow } from "@mui/material";
+import SelectForm from '../SelectForm';
 
 
 const SaladTable = ({salad, ingredients, types}) => {
@@ -22,7 +23,7 @@ const SaladTable = ({salad, ingredients, types}) => {
             {salad.name}
           </TableCell>
           <TableCell>
-            {salad.size}
+            <SelectForm types={types.saladTypes} salad={salad}/>
           </TableCell>
         </TableRow>
       </TableHead>
