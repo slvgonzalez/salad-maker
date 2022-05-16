@@ -16,7 +16,7 @@ const Salad = (props) => {
       list.map((salad) => (
         <div className='wrapper' key={salad.id}>
           <SaladTable  salad={salad} ingredients={ ingredients } types={ types }/>
-          <Button variant="text" onClick={console.log("add ingredient pressed")}>ADD INGREDIENT</Button>
+          <Button variant="text" onClick={console.log("add ingrdient")}>ADD INGREDIENT</Button>
         </div >
       ))
     )

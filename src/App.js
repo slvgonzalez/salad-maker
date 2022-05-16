@@ -12,7 +12,7 @@ function App() {
         gutterBottom
         variant="h2"
         align='center'>
-          Mel's Kitchen
+          Welcome to
       </Typography>
       <SaladDesigner />
 

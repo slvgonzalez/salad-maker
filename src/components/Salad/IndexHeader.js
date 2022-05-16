@@ -17,7 +17,6 @@ const IndexHeader = () => {
           List of Salads
         </Typography>
         <Button
-        color="success"
         variant="outlined"
         startIcon={<AddCircle />}
         onClick={ addSalad }

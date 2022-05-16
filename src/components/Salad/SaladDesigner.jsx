@@ -41,10 +41,13 @@ const SaladDesigner = (props) => {
     })
   }
 
-  return <>
+  return (
+  <div className="wrapper">
+    <img src={process.env.PUBLIC_URL + '/logo_size.jpg'} alt="Mel's Kitchen logo"/>
     <IndexHeader />
     <Salad list={salads} products={products} types={businessLogic}/>
-  </>
+  </div>
+  )
 }
 
 export default SaladDesigner;
